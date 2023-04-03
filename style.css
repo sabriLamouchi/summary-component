@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orange-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* gridiant */
+    --Light-slate-blue : hsl(252, 100%, 67%);
+    --Light-royal-blue : hsl(241, 81%, 54%);
+    --Violet-blue : hsla(256, 72%, 46%, 1);
+    --Persian-blue : hsla(241, 72%, 46%, 0) ;
+
+    /* Natural */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+.flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;   
+    font-size: 18px;
+    border-radius: 15px;
+    font-family: Hanken Grotesk;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    box-shadow: 10px 10px 25px var(--Pale-blue);
+}
+
+
+.container .one{
+    width: 50%;
+    background:linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 20px;
+    gap: 15px;
+    color:var(--White);
+    z-index: 1;
+}
+
+
+.container .one div{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background:linear-gradient(to bottom,var(--Light-royal-blue),var(--Persian-blue));
+
+}
+.container .one  span{
+    font-size: 50px;
+    color:hsl(--White);
+    /*  */
+}
+.container .one h2{
+    color: var(--Light-lavender);
+}
+.container .one  p{
+    color: var(--Light-lavender);   
+}
+.container .one > p{
+    text-align: center;
+    margin-bottom: 20px;
+    width: 250px;
+}
+.container .one > span{
+    font-size: 30px;
+}
+
+.container div:last-child{  
+    width: 50%;
+    gap: 15px;
+   justify-content: flex-start ;
+   align-content: center    ;
+   height: 30%; 
+   border-radius:15px ;
+   z-index: 0;
+}
+
+.container div:last-child h4{
+    align-self: flex-start;
+    color:var(--Dark-gray-blue);
+}
+.container .two >span {
+    display: flex;
+    width: 15em;
+    gap: 40px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.container .two span div{
+    display: flex;
+    width: 50%; 
+}
+.container .two >span:nth-child(2){
+    color:var(--Light-red);
+    position: relative;
+}
+.container .two > span:nth-child(2)::before{
+    background-color:var(--Light-red) ;
+}
+.container .two >span:nth-child(3){
+    color:var(--Orange-yellow);
+    position: relative;
+}
+.container .two > span:nth-child(3  )::before{
+    background-color:var(--Orange-yellow) ;
+}
+.container .two >span:nth-child(4){
+    color:var(--Green-teal);
+    position: relative;
+}
+.container .two > span:nth-child(4)::before{
+    background-color:var(--Green-teal) ;
+}
+.container .two >span:nth-child(5){
+    color:var(--Cobalt-blue);
+    position: relative;
+}
+.container .two > span:nth-child(5)::before{
+    background-color:var(--Cobalt-blue) ;
+}
+.container .two span > span{
+    width: 50%;
+    color: var(--Dark-gray-blue) !important;
+
+}
+.container .two  a{
+    color: var(--Light-lavender) !important;
+}
+.back-opacity::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    border-radius: 15px;
+}
+
+button{
+    background-color:var(--Dark-gray-blue) ;
+    width: 250px;
+    height: 3rem;
+    color: var(--White);
+    font-size: 18px;
+    font-family: Hanken Grotesk;
+    border-radius: 20px;
+    border: 0px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background:linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));;
+}
+
+/* mobile */
+@media (max-width:1439px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-self: center;
+    }
+    .container .one{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .container .two{
+        height: 100%;
+    }
+}
